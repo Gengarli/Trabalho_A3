@@ -1,0 +1,49 @@
+package TrabalhoA3;
+import java.util.Scanner;
+
+public class professores {
+    
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Olá Professor ! Qual o seu nome ?");
+        String nome = teclado.nextLine();
+         System.out.println("Qual seu regime de pagamento? \nResponda com: \nCLT \nPJ \nHorista \n:");
+        String forma = teclado.nextLine();
+
+        CalculoSalario(nome, forma);
+        teclado.close();
+    }
+    public static void CalculoSalario(String n, String f){
+
+     if(f.equals("PJ")){
+
+       System.out.println("Qual valor do contrato que você está exercendo ?");
+       Scanner teclado = new Scanner (System.in);
+       int v = teclado.nextInt();
+       teclado.close();
+       System.out.println("O professor: " + n + " deverá receber o valor de: " + v + " reais.");
+     }
+     else if(f.equals("Horista")){
+        
+        System.out.println("Quantas horas você trabalhou ?");
+        Scanner teclado = new Scanner (System.in);
+        int t = teclado.nextInt();
+        System.out.println("Qual o seu ganho por hora ?");
+        int g = teclado.nextInt();
+        teclado.close();
+        
+        int v = g * t;
+        System.out.println("O professor: " + n + " deverá receber o valor de: " + v + " reais.");
+     }
+     else if (f.equals("CLT")){
+
+        System.out.println("Qual o valor do seu salário mensal ?");
+        Scanner teclado = new Scanner (System.in);
+        int v = teclado.nextInt();
+        teclado.close();
+
+        System.out.println("O professor: " + n + " deverá receber o valor de: " + v + " reais.");
+     }
+  }
+}
