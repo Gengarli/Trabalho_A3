@@ -8,7 +8,7 @@ public class professores {
 
         System.out.println("Olá Professor ! Qual o seu nome ?");
         String nome = teclado.nextLine();
-         System.out.println("Qual seu regime de pagamento? \nResponda com: \nCLT \nPJ \nHorista \n:");
+        System.out.println("Qual sua forma de pagamento? \nResponda com: \nCLT \nPJ \nHorista \n:");
         String forma = teclado.nextLine();
 
         CalculoSalario(nome, forma);
